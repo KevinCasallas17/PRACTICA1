@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+
+:root{
+    --colorbg:#F5F5F5;
+    --colorletra:#014C90;
+    --fuenteprincipal:'Montserrat', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--colorbg);
+    font-family: var(--fuenteprincipal);
+}
+
+figure{
+    height: 95%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+/* ESTILOS PRINCPALES */
+
+#cont-nav{
+    margin: 0;
+    padding: 10px 55px;
+    height: 10vh;
+    border-bottom: 1px solid gray;
+}
+    #navbar{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        #secciones #listitems{
+            list-style: none;
+            display: flex;
+            gap: 1.7rem;
+        }
+        #secciones #listitems li a{
+            text-decoration: none;
+            font-family: var(--fuenteprincipal);
+            color: var(--colorletra);
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+        #secciones #listitems li a:hover{
+            padding: 0 0 16px 0;
+            border-bottom: 4px solid var(--colorletra);
+        }
+
+        #iconos{
+            display: flex;
+            gap: 1.7rem;
+            color: var(--colorletra);
+        }
+        #iconos i{
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+#subheader{
+    border-bottom: 1px solid gray;
+    height: 25vh;
+    margin: 0;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    position: relative;
+}
+
+.contimgs{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.contimgs img{
+
+    transition: all 0.7s ease-in;
+}
+
+.contimgs:hover img{
+    transform: scale(106%);
+}
+
+.contimgs:hover .txtcont{
+    transform: scale(0);
+}
+
+.txtcont{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color:rgba(0,0,0,.2);
+    transition: all 0.6s ease-in;
+}
+
+.txtcont p{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+#principal{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0;
+    padding: 12px 0 0 16px;
+}
+
+.titulos{
+    grid-column: 1/span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .titulos h1{
+        color: var(--colorletra);
+        font-weight: 600;
+        font-size: 23px;
+    }
+    .titulos h2{
+        color:  rgb(120,120,120);
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin: -10px;
+    }
+
+
+#filtros{
+    margin-top: 2.5rem;
+    width: 18vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: sticky;
+    top: 7%;
+}
+
+.contcats{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    padding: 6px 0;
+    border-bottom: 1px solid gray;
+    color: var(--colorletra);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 30px;
+    width: 75vw;
+    margin-top: 2.5rem;
+}
+
+.cont-galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+
+.cont-galeria figure img{
+    height: 12rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.icon--active{
+    transform: rotate(180deg);
+    color: black;
+    transition: 0.5s;
+}
+
+.results{
+    display: none;
+}
+
+.results--show{
+    display: inline;
+    transition: 0.6s;
+}
